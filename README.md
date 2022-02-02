@@ -5,11 +5,11 @@
 - Utilizar librerías como Material-ui o Tailwind :white_check_mark:
 - Tener una lista de elemento (cards) que pueda aplicarse filtros :white_check_mark:
 - Embeber un video de YouTube que a partir de un click en la card de la lista lanzar un modal con el reproductor, y el video funcione :white_check_mark:
-- En caso de hacer el test Back-End, Crear vista login :white_check_mark:
+- En caso de hacer el test Back-End, Crear vista login :white_large_square:
 
 ## 🚩 Test Back-End Requerimientos generales:
-- Crear sistema de Login :white_large_square
-- Persistencia de la data ( relacional o no relacional ) :white_large_square
+- Crear sistema de Login :white_large_square :white_large_square:
+- Persistencia de la data ( relacional o no relacional ) :white_large_square:
 
 ### Getting Started with Create React App
 
