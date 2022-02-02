@@ -80,6 +80,7 @@ const useStyles = makeStyles(
             width: (drawerWidth / 4),
             backgroundColor: '#282c34 !important',
             color: '#fff !important',
+            overflow: 'hidden',
             transition: theme.transitions.create("width", {
                 easing: theme.transitions.easing.easeOut,
                 duration: transitionDuration
