@@ -3,7 +3,7 @@ const Data = [
         alt: "Agila",
         category: "aves",
         srcImg: "https://www.nationalgeographic.com.es/medio/2018/02/27/aguila__1280x720.jpg",
-        srcVideo: "https://youtu.be/oUUtpZLPg_Q"
+        srcVideo: "https://www.youtube.com/embed/oUUtpZLPg_Q"
     },
     {
         alt: "Colibrie",
@@ -15,7 +15,7 @@ const Data = [
         alt: "Perro",
         category: "mamiferos",
         srcImg: "https://www.caracteristicas.co/wp-content/uploads/2017/02/perro-3-e1561679226953.jpg",
-        srcVideo: "https://youtu.be/EhJcdn7rCwc"
+        srcVideo: "https://www.youtube.com/embed/EhJcdn7rCwc"
     },
     {
         alt: "Elefante",
@@ -51,7 +51,7 @@ const Data = [
         alt: "Pez Payaso",
         category: "peces",
         srcImg: "https://www.anipedia.net/imagenes/pez-payaso.jpg",
-        srcVideo: "https://youtu.be/6gMZm1yRak0"
+        srcVideo: "https://www.youtube.com/embed/6gMZm1yRak0"
     },
     {
         alt: "Pez Dorado",

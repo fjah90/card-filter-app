@@ -35,7 +35,9 @@ const GridCardItemComponent: React.FC<GridCardItemComponentProps> = props => {
             >
                 <Box className={classes.box}>
                     {srcVideo ? 
-                        <object className={classes.box} data={srcVideo}></object>
+                        <iframe width="690" height="400"
+                            src={srcVideo}>
+                        </iframe>
                         :
                         <img className={classes.box} src={srcImg} alt={alt} />
                     }

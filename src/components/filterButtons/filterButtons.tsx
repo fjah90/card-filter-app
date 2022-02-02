@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "@mui/material/Button";
+import { makeStyles, createStyles } from '@mui/styles'
 
 import Data from "assets/dummy/data";
 
@@ -12,6 +13,7 @@ export interface ButtonsProps {
 
 const Buttons: React.FC<ButtonsProps> = props => {
     const { filterItem, setItem, menuItems } = props
+    const classes = useStyles()
 
     return (
         <>
@@ -21,7 +23,8 @@ const Buttons: React.FC<ButtonsProps> = props => {
                         size="small"
                         variant="outlined"
                         onClick={() => filterItem(item)}
-                        key={index}
+                        key={index}a
+                        className={button}
                     >
                         {item}
                     </Button>
@@ -31,11 +34,22 @@ const Buttons: React.FC<ButtonsProps> = props => {
                 size="small"
                 variant="outlined"
                 onClick={() => setItem(Data)}
+                className={button}
             >
                 Todos
             </Button>
         </>
     );
 };
+
+const useStyles = makeStyles(
+    createStyles({
+        button: {
+            border: "1px solid #009688",
+            color: "#009688 !important",
+            margin: "5px 0 5px px 5px"
+        }
+    })
+)
 
 export default Buttons;
