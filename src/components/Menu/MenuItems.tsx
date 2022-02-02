@@ -1,22 +1,20 @@
-/* eslint-disable @typescript-eslint/no-redeclare */
 import React from 'react'
 import PropTypes from 'prop-types'
-import { makeStyles, createStyles } from '@material-ui/core/styles'
-// import { SvgIconProps } from '@material-ui/core/SvgIcon'
+import { makeStyles, createStyles } from '@mui/styles'
+import { SvgIconProps } from '@mui/material/SvgIcon'
 
-import List from '@material-ui/core/List'
+import List from '@mui/material/List'
 
-import ListItemIcon from '@material-ui/core/ListItemIcon'
-import ListItemText from '@material-ui/core/ListItemText'
-import Divider from '@material-ui/core/Divider'
-import Collapse from '@material-ui/core/Collapse'
+import ListItemIcon from '@mui/material/ListItemIcon'
+import ListItemText from '@mui/material/ListItemText'
+import Divider from '@mui/material/Divider'
+import Collapse from '@mui/material/Collapse'
 
-import IconExpandLess from '@material-ui/icons/ExpandLess'
-import IconExpandMore from '@material-ui/icons/ExpandMore'
+import IconExpandLess from '@mui/icons-material/ExpandLess'
+import IconExpandMore from '@mui/icons-material/ExpandMore'
 
 import MenuItemComponent from './MenuItemComponent'
 
-// React runtime PropTypes
 export const MenuItemPropTypes = {
     name: PropTypes.string.isRequired,
     link: PropTypes.string,
@@ -24,17 +22,14 @@ export const MenuItemPropTypes = {
     items: PropTypes.array,
 }
 
-// TypeScript compile-time props type, infered from propTypes
-// https://dev.to/busypeoples/notes-on-typescript-inferring-react-proptypes-1g88
 type MenuItemPropTypes = PropTypes.InferProps<typeof MenuItemPropTypes>
 type MenuItemPropsWithoutItems = Omit<MenuItemPropTypes, 'items'>
 
-// Improve child items declaration
 export type MenuItemProps = MenuItemPropsWithoutItems & {
     items?: MenuItemProps[]
 }
 
-const MenuItem: React.FC<MenuItemProps> = props => {
+const MenuItems: React.FC<MenuItemProps> = props => {
     const { name, link, Icon, items = [] } = props
     const classes = useStyles()
     const isExpandable = items && items.length > 0
@@ -64,7 +59,7 @@ const MenuItem: React.FC<MenuItemProps> = props => {
             <Divider />
             <List component="div" disablePadding>
                 {items.map((item, index) => (
-                    <MenuItem {...item} key={index} />
+                    <MenuItems {...item} key={index} />
                 ))}
             </List>
             <ListItemIcon className={classes.menuItemIcon}>
@@ -85,17 +80,17 @@ const useStyles = makeStyles(theme =>
     createStyles({
         menuItem: {
             '&.active': {
-                background: 'rgba(0, 0, 0, 0.08)',
+                background: 'rgb(255 255 255 / 50%) !important ',
                 '& .MuiListItemIcon-root': {
-                    color: '#fff',
+                    color: '#fff !important',
                 },
             },
         },
         menuItemIcon: {
-            color: '#97c05c',
+            color: '#009688 !important',
             paddingLeft: '3px',
         },
     }),
 )
 
-export default MenuItem
+export default MenuItems
